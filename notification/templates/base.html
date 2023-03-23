@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <title >Django Assignment</title>
+   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+   <!-- JQuery -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+   
+</head>
+<body>
+  <!--/ Nav Star /-->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
+        data-target="#navbarTogglerDemo01" aria-expanded="false">
+        <span class="fa fa-search" aria-hidden="true"></span>
+      </button>
+      {% block nav %}{% endblock %}
+    </div>
+  </nav>
+  <!--/ Nav End /-->
+  <!--/ Intro Single star /-->
+  {% block status %}
+  {% endblock %}
+  <!--/ Intro Single End /-->
+<!--container-->
+<script>
+    var loc = window.location
+    var wsStart = "ws://"
+    if (loc.protocol == "https:"){
+        wsStart = "wss://"
+    }
+    var webSocketEndpoint =  wsStart + loc.host + '/notifications/'  // ws : wss   // Websocket URL, Same on as mentioned in the routing.py
+
+
+    var socket = new WebSocket(webSocketEndpoint) // Creating a new Web Socket Connection
+
+    // Socket On receive message Functionality
+    socket.onmessage = function(event){
+        console.log('message', event)
+        $("body").append("<h3>"+event.data+"</h3>")
+        // Can write any functionality based on your requirement
+
+    }
+
+    
+    // Socket Connet Functionality
+    socket.onopen = function(event){
+        console.log('open', event);
+
+
+        socket.send(JSON.stringify({
+                'message': "message hey"
+            }));
+    }
+
+    socket.emit = function(data) {
+        console.log(data)
+    }
+
+    // Socket Error Functionality
+    socket.onerror = function(event){
+        console.log('error', event)
+    }
+
+    // Socket close Functionality
+    socket.onclose = function(event){
+        console.log('closed', event)
+    }
+    </script>
+</body>
+</html>
