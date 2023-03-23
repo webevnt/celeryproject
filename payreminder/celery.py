@@ -9,7 +9,7 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     'add-every-minute': {
         'task': 'task_send_notification',
-        'schedule': crontab()
+        'schedule': crontab(minute=0, hour='*/24')
     },
 }
 app.conf.timezone = 'UTC'
