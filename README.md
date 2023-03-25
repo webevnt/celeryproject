@@ -1,4 +1,4 @@
-# Given Django project for Payment Reminders
+# Django project for Payment Reminders
 
 Here given description for project:-
 
