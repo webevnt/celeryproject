@@ -26,7 +26,7 @@ Admin Datatable:\
 Subscribers w.r.t SaleOrder\
 Data table for Notification Rules with various List-filter and Search fields\
 Data-table for Sent Notifications w.r.t SaleOrder\
-Bounced Subscribers with List-Filter and Search\
+Bounced Subscribers with List-Filter and Search
 
 ## Installation and setup?
 
