@@ -54,10 +54,10 @@ $ sudo apt install redis-server
 
 
 And create .env file  with detail to used for Email services
-EMAIL_HOST=xxxxxxxx
-EMAIL_PORT=xxxxxxxx
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER=xxxxxxxx
+EMAIL_HOST=xxxxxxxx \
+EMAIL_PORT=xxxxxxxx \
+EMAIL_USE_TLS=True \
+EMAIL_HOST_USER=xxxxxxxx \
 EMAIL_HOST_PASSWORD=xxxxxxxx
 
 
