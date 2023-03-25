@@ -9,24 +9,24 @@ Sending Scheduled Notifications for Payment Reminders
  
 KEY Points
  
-Create a NEW App e.g Notification (Optional: you can use Library Django Channels)
-Create a MODEL "Subscribers" with Foreign Key (SaleOrder)
-Notifications Rules Setup
-Django Job Celery to Execute in background to send Mail / SMS based on the Subscription.
+Create a NEW App e.g Notification (Optional: you can use Library Django Channels) \
+Create a MODEL "Subscribers" with Foreign Key (SaleOrder) \
+Notifications Rules Setup\
+Django Job Celery to Execute in background to send Mail / SMS based on the Subscription. \
  
-DND Option for Selective User ( Optional)
-Notification Templates with F.KEY of Country, SuperAgent, Store  ( Already Built)
-Mandatory Management of Bounce (for SMS / Email)
-After completing the daily Activity of Notification Sending – Inform to SuperAgent for Successful delivery and Bounced Delivery.
+DND Option for Selective User \
+Notification Templates with F.KEY of Country, SuperAgent, Store  ( Already Built) \
+Mandatory Management of Bounce (for SMS / Email)\
+After completing the daily Activity of Notification Sending – Inform to SuperAgent for Successful delivery and Bounced Delivery.\
  
 Admin Actions:
-Introduce a method “Rebuild Notification Subscriptions “ in SaleOrder
+Introduce a method “Rebuild Notification Subscriptions “ in SaleOrder\
  
-Admin Datatable:
-Subscribers w.r.t SaleOrder
-Data table for Notification Rules with various List-filter and Search fields
-Data-table for Sent Notifications w.r.t SaleOrder
-Bounced Subscribers with List-Filter and Search
+Admin Datatable:\
+Subscribers w.r.t SaleOrder\
+Data table for Notification Rules with various List-filter and Search fields\
+Data-table for Sent Notifications w.r.t SaleOrder\
+Bounced Subscribers with List-Filter and Search\
 
 ## Installation and setup?
 
