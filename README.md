@@ -46,7 +46,7 @@ Next we have to install some prerequisite like redis-ser:
 ```sh
 $ sudo apt update
 ```
-
+Payment Reminders App with Django and Celery
 and 
 ```sh
 $ sudo apt install redis-server
