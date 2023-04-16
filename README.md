@@ -1,4 +1,4 @@
-# Django project for Payment Reminders
+# Payment Reminders App with Django and Celery
 
 Here given description for project:-
 
